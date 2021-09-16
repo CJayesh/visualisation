@@ -1,0 +1,16 @@
+<div>
+  <input matInput type="number" [(ngModel)]="to_search" />
+  <button (click)="doBinarySearch()">Search</button>
+</div>
+<div class="boxes">
+  <div *ngFor="let num of sorted_num; let i = index" class="number-box">
+    <div class="index">{{ i }}</div>
+    <div class="number">{{ num }}</div>
+    <div class="state begin" *ngIf="i == begin_index">Begin</div>
+    <div class="state mid" *ngIf="i == mid_index">Mid</div>
+    <div class="state end" *ngIf="i == end_index">End</div>
+  </div>
+</div>
+<div>
+  {{ result }}
+</div>
